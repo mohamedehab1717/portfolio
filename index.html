@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Mohamed Ehab Saad Ahmed - Full Stack Web Developer. Showcasing modern and scalable web applications.">
+    <title>Mohamed Ehab | Full Stack Web Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Mohamed<span>.Ehab</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in">Mohamed Ehab Saad Ahmed</h1>
+                    <h2 class="fade-in delay-1">Full Stack Web Developer</h2>
+                    <p class="fade-in delay-2">I build modern and scalable web applications</p>
+                    <div class="hero-btns fade-in delay-3">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-title">
+                    <h3>About Me</h3>
+                    <div class="underline"></div>
+                </div>
+                <div class="about-content">
+                    <p>I'm a web developer passionate about building modern web applications. I focus on creating fast,
+                        responsive, and user-friendly websites using modern technologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section bg-alt">
+            <div class="container">
+                <div class="section-title">
+                    <h3>My Skills</h3>
+                    <div class="underline"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3 / SCSS</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Database</h4>
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>NPM / Yarn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Featured Projects</h3>
+                    <div class="underline"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: E-commerce Full Stack -->
+                    <div class="project-card showcase-card" id="ecommerce-showcase">
+                        <div class="project-header" style="background-image: url('background.jpg');">
+                            <div class="header-overlay">
+                                <span class="badge">Full Stack</span>
+                                <h4>📦 E-Commerce Full Stack Project</h4>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-desc">
+                                <p><strong>E-Commerce Full Stack Application</strong></p>
+                                <p>Built a full-stack e-commerce platform with user authentication, product management,
+                                    and order processing. Implemented REST APIs using Node.js and Express, integrated
+                                    MySQL database, and developed the frontend using HTML, CSS, and JavaScript. The
+                                    project also includes an admin dashboard for managing products.</p>
+                                <div class="tech-pills" style="margin-top: 1rem;">
+                                    <span>Node.js</span><span>Express</span><span>MySQL</span><span>JWT</span><span>Vanilla
+                                        JS</span>
+                                </div>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="ecommerce-details.html" class="btn btn-sm btn-primary">View Full Project</a>
+                                <a href="https://github.com/mohamedehab1717/e-commerce-project/tree/main"
+                                    target="_blank" class="btn btn-sm btn-outline">GitHub Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Future projects can be added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section bg-alt">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Get In Touch</h3>
+                    <div class="underline"></div>
+                </div>
+                <div class="contact-container">
+                    <p class="contact-text">I'm always open to discussing new projects, creative ideas or opportunities
+                        to be part of your visions.</p>
+                    <div class="contact-links">
+                        <a href="mailto:mohmedehab17711@gmail.com" class="contact-item">
+                            <span class="icon">📧</span>
+                            <span>mohmedehab17711@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/mohamedehab1717" target="_blank" class="contact-item">
+                            <span class="icon">🔗</span>
+                            <span>GitHub: mohamedehab1717</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohamed-ehab-35073a1b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank" class="contact-item">
+                            <span class="icon">👔</span>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mohamed Ehab Saad Ahmed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
