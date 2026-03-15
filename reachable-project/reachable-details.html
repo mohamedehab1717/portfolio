@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase: Reachable Full Stack | Mohamed Ehab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .details-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('background.jpg') center/cover no-repeat fixed;
+            padding-top: 80px;
+        }
+
+        .details-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10, 12, 16, 0.6), var(--bg-dark));
+        }
+
+        .details-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .glass-panel {
+            background: rgba(22, 27, 34, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-top: -100px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .back-btn:hover {
+            border-color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .showcase-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tags span {
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+
+        .gallery-detailed {
+            grid-column: 1 / -1;
+            margin-top: 4rem;
+        }
+
+        .gallery-grid-lg {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-grid-lg img {
+            width: 100%;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            cursor: zoom-in;
+        }
+
+        .gallery-grid-lg img:hover {
+            transform: scale(1.03);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-section {
+            margin-top: 4rem;
+        }
+
+        .video-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .video-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(0, 210, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .video-card video {
+            width: 100%;
+            display: block;
+            border-radius: 20px 20px 0 0;
+            background: #000;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .video-card-info {
+            padding: 1.2rem 1.5rem;
+        }
+
+        .video-card-info h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .video-card-info p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .glass-panel {
+                padding: 1.5rem;
+                margin-top: -50px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        .links-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html#projects" class="back-btn">← Back to Portfolio</a>
+
+    <header class="details-hero">
+        <div class="container hero-content">
+            <h1 class="fade-in">♿ Reachable Full Stack Project</h1>
+            <p class="fade-in delay-1" style="max-width: 800px; margin: 1rem auto;">A full-stack web platform designed to help people with disabilities discover accessible places and services in Egypt.</p>
+        </div>
+    </header>
+
+    <main class="details-content">
+        <div class="glass-panel fade-in delay-2">
+            <div class="tech-tags">
+                <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Laravel Sanctum</span><span>Composer</span><span>HTML5</span><span>CSS</span><span>Vanilla JS</span><span>Blade (Laravel)</span><span>WAMP Server</span><span>Laravel Mix</span><span>Axios</span><span>Git</span>
+            </div>
+
+            <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                Reachable is a centralized directory solving the struggle of finding verified accessible public places. 
+                I designed and built the complete Laravel MVC backend, relational database schema, and all frontend pages. 
+                The platform categorizes locations by type, helping users find hospitals, malls, restaurants, schools, public transport, adaptive sports, job opportunities, and medical supply shops tailored to their accessibility needs.
+            </p>
+
+            <div class="showcase-grid">
+                <div class="showcase-section">
+                    <h3>🚀 Features</h3>
+                    <p><strong>👤 User Features</strong></p>
+                    <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li>8 Category Sections (Hospitals, Malls, Jobs, etc.)</li>
+                        <li>Authentication System (Register/Login via Auth)</li>
+                        <li>Job Filtering by Disability Type (mobility, hand, speech, vision)</li>
+                        <li>Feedback & Rating System with validation</li>
+                        <li>Video Hero Banner & Smooth AOS animations</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;"><strong>🛠 Admin Features</strong></p>
+                    <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li>Backend admin area for managing categories</li>
+                        <li>Content management and auditing</li>
+                    </ul>
+                </div>
+
+                <div class="showcase-section">
+                    <h3>📂 Structure & Database</h3>
+                    <pre class="structure-tree" style="margin-bottom: 2rem;">
+reachable-project
+├── app (Models, Controllers)
+├── routes (web, api)
+├── database (Migrations, Seeding)
+└── resources (Blade, CSS, JS)</pre>
+                    <p><strong>🗄 Database Main Tables</strong></p>
+                    <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li>users, personal_access_tokens</li>
+                        <li>categories, hospitals, schools, jobs</li>
+                        <li>hospital_infos, feedbacks (with 1-5 ratings)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gallery-detailed">
+                <h3>📸 Project Gallery</h3>
+                <div class="gallery-grid-lg">
+                    <img src="reachable1.png" alt="Reachable Screenshot 1">
+                    <img src="reachable2.png" alt="Reachable Screenshot 2">
+                    <img src="reachable3.png" alt="Reachable Screenshot 3">
+                    <img src="reachable4 (2).png" alt="Reachable Screenshot 4">
+                    <img src="reachable5.png" alt="Reachable Screenshot 5">
+                    <img src="reachable6.png" alt="Reachable Screenshot 6">
+                    <img src="reachable7.png" alt="Reachable Screenshot 7">
+                    <img src="reachable8.png" alt="Reachable Screenshot 8">
+                    <img src="reachable9.png" alt="Reachable Screenshot 9">
+                    <img src="reachable10.png" alt="Reachable Screenshot 10">
+                    <img src="reachable11.png" alt="Reachable Screenshot 11">
+                    <img src="reachable12.png" alt="Reachable Screenshot 12">
+                </div>
+            </div>
+
+            <!-- Video Demo Section -->
+            <div class="video-section">
+                <h3>🎬 Project Demo Video</h3>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <video controls preload="metadata" poster="reachable1.png">
+                            <source src="REACHABLE.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-card-info">
+                            <h4>🌍 Reachable Platform Overview</h4>
+                            <p>A comprehensive walkthrough of the accessible places directory, showcasing the various categories, authentication flow, and dynamic location cards with AOS animations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-section" style="margin-top: 4rem;">
+                <h3>🎯 Future Improvements</h3>
+                <ul class="mini-list"
+                    style="margin-left: 1rem; color: var(--text-secondary); display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                    <li>Interactive Map Integration (Google Maps)</li>
+                    <li>Global Search Functionality</li>
+                    <li>Filter all categories by Disability Type</li>
+                    <li>Full Arabic Language Support (RTL)</li>
+                    <li>User Reviews for all categories</li>
+                    <li>iOS/Android Mobile App companion</li>
+                </ul>
+            </div>
+
+            <p style="text-align: center; margin-top: 3rem; color: var(--text-secondary); font-size: 0.9rem;">Author:
+                Mohamed Ehab</p>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
