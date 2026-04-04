@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Showcase: Reachable Full Stack | Mohamed Ehab</title>
+    <title>Showcase: Task Manager Pro | Mohamed Ehab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -63,6 +63,8 @@
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition-smooth);
+            text-decoration: none;
+            color: var(--text-primary);
         }
 
         .back-btn:hover {
@@ -183,6 +185,13 @@
             line-height: 1.6;
         }
 
+        .links-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+
         @media (max-width: 768px) {
             .showcase-grid {
                 grid-template-columns: 1fr;
@@ -198,11 +207,29 @@
             }
         }
 
-        .links-group {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            justify-content: center;
+        .structure-tree {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+
+        .mini-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mini-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
     </style>
 </head>
@@ -212,61 +239,52 @@
 
     <header class="details-hero">
         <div class="container hero-content">
-            <h1 class="fade-in">♿ Reachable Full Stack Project</h1>
-            <p class="fade-in delay-1" style="max-width: 800px; margin: 1rem auto;">A full-stack web platform designed
-                to help people with disabilities discover accessible places and services in Egypt.</p>
+            <h1 class="fade-in">📝 Task Manager Pro</h1>
+            <p class="fade-in delay-1" style="max-width: 800px; margin: 1rem auto;">A modern, high-performance Full Stack Task Management application built with the MERN stack.</p>
         </div>
     </header>
 
     <main class="details-content">
         <div class="glass-panel fade-in delay-2">
             <div class="tech-tags">
-                <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Laravel
-                    Sanctum</span><span>Composer</span><span>HTML5</span><span>CSS</span><span>Vanilla
-                    JS</span><span>Blade (Laravel)</span><span>WAMP Server</span><span>Laravel
-                    Mix</span><span>Axios</span><span>Git</span>
+                <span>MongoDB</span><span>Express</span><span>React (v19)</span><span>Node.js</span><span>JWT</span><span>Bcrypt.js</span><span>Axios</span><span>React Router</span><span>Vanilla CSS</span><span>Glassmorphism</span>
             </div>
 
             <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
-                Reachable is a centralized directory solving the struggle of finding verified accessible public places.
-                I designed and built the complete Laravel MVC backend, relational database schema, and all frontend
-                pages.
-                The platform categorizes locations by type, helping users find hospitals, malls, restaurants, schools,
-                public transport, adaptive sports, job opportunities, and medical supply shops tailored to their
-                accessibility needs.
+                Designed for productivity with a sleek "Glassmorphism" UI and robust project grouping. This application allows users to manage their daily tasks efficiently, grouping them into projects, setting priorities, and tracking deadlines with a modern aesthetic.
             </p>
 
             <div class="showcase-grid">
                 <div class="showcase-section">
-                    <h3>🚀 Features</h3>
-                    <p><strong>👤 User Features</strong></p>
+                    <h3>🚀 Key Features</h3>
                     <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
-                        <li>8 Category Sections (Hospitals, Malls, Jobs, etc.)</li>
-                        <li>Authentication System (Register/Login via Auth)</li>
-                        <li>Job Filtering by Disability Type (mobility, hand, speech, vision)</li>
-                        <li>Feedback & Rating System with validation</li>
-                        <li>Video Hero Banner & Smooth AOS animations</li>
-                    </ul>
-                    <p style="margin-top: 1.5rem;"><strong>🛠 Admin Features</strong></p>
-                    <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
-                        <li>Backend admin area for managing categories</li>
-                        <li>Content management and auditing</li>
+                        <li><strong>Secure Authentication:</strong> JWT-based login and registration with hashed passwords.</li>
+                        <li><strong>Project Management:</strong> Create, edit, and delete projects to group related tasks.</li>
+                        <li><strong>Task Tracking:</strong> Manage tasks with status (Pending, In Progress, Done) and priority (Low, Medium, High).</li>
+                        <li><strong>Deadlines & Overdue Alerts:</strong> Visual indicators for nearest deadlines and overdue tasks.</li>
+                        <li><strong>Smart Search & Sort:</strong> Quickly find projects and sort them by deadline, name, or creation date.</li>
                     </ul>
                 </div>
 
                 <div class="showcase-section">
                     <h3>📂 Structure & Database</h3>
                     <pre class="structure-tree" style="margin-bottom: 2rem;">
-reachable-project
-├── app (Models, Controllers)
-├── routes (web, api)
-├── database (Migrations, Seeding)
-└── resources (Blade, CSS, JS)</pre>
-                    <p><strong>🗄 Database Main Tables</strong></p>
+task-manager-pro
+├── backend
+│   ├── models (User, Project, Task)
+│   ├── routes (auth, projects, tasks)
+│   ├── middleware (auth)
+│   └── server.js
+└── frontend
+    ├── src
+    │   ├── components
+    │   ├── pages
+    │   └── context</pre>
+                    <p><strong>🗄 Mongoose Schemas</strong></p>
                     <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
-                        <li>users, personal_access_tokens</li>
-                        <li>categories, hospitals, schools, jobs</li>
-                        <li>hospital_infos, feedbacks (with 1-5 ratings)</li>
+                        <li><strong>User:</strong> Username, Email, Hashed Password.</li>
+                        <li><strong>Project:</strong> Name, Description, UserID, Count.</li>
+                        <li><strong>Task:</strong> Title, Status, Priority, Deadline, ProjectID.</li>
                     </ul>
                 </div>
             </div>
@@ -274,34 +292,28 @@ reachable-project
             <div class="gallery-detailed">
                 <h3>📸 Project Gallery</h3>
                 <div class="gallery-grid-lg">
-                    <img src="reachable1.png" alt="Reachable Screenshot 1">
-                    <img src="reachable2.png" alt="Reachable Screenshot 2">
-                    <img src="reachable3.png" alt="Reachable Screenshot 3">
-                    <img src="reachable4 (2).png" alt="Reachable Screenshot 4">
-                    <img src="reachable5.png" alt="Reachable Screenshot 5">
-                    <img src="reachable6.png" alt="Reachable Screenshot 6">
-                    <img src="reachable7.png" alt="Reachable Screenshot 7">
-                    <img src="reachable8.png" alt="Reachable Screenshot 8">
-                    <img src="reachable9.png" alt="Reachable Screenshot 9">
-                    <img src="reachable10.png" alt="Reachable Screenshot 10">
-                    <img src="reachable11.png" alt="Reachable Screenshot 11">
-                    <img src="reachable12.png" alt="Reachable Screenshot 12">
+                    <img src="1.png" alt="Landing Page">
+                    <img src="2.png" alt="Login Page">
+                    <img src="3.png" alt="Registration Page">
+                    <img src="4.png" alt="Dashboard Overview">
+                    <img src="5.png" alt="Project View">
+                    <img src="6.png" alt="Task Creation">
+                    <img src="7.png" alt="Search & Filtering">
                 </div>
             </div>
 
             <!-- Video Demo Section -->
             <div class="video-section">
-                <h3>🎬 Project Demo Video</h3>
+                <h3>🎬 Full Walkthrough Demo</h3>
                 <div class="video-grid">
                     <div class="video-card">
-                        <video controls preload="metadata" poster="reachable1.png">
-                            <source src="REACHABLE.mp4" type="video/mp4">
+                        <video controls preload="metadata" poster="4.png">
+                            <source src="task-manager.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <div class="video-card-info">
-                            <h4>🌍 Reachable Platform Overview</h4>
-                            <p>A comprehensive walkthrough of the accessible places directory, showcasing the various
-                                categories, authentication flow, and dynamic location cards with AOS animations.</p>
+                            <h4>Workflow & UI Demonstration</h4>
+                            <p>Watch how the application handles user authentication, real-time project filtering, and the smooth Glassmorphism transitions in the task board.</p>
                         </div>
                     </div>
                 </div>
@@ -311,23 +323,24 @@ reachable-project
                 <h3>🎯 Future Improvements</h3>
                 <ul class="mini-list"
                     style="margin-left: 1rem; color: var(--text-secondary); display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-                    <li>Interactive Map Integration (Google Maps)</li>
-                    <li>Global Search Functionality</li>
-                    <li>Filter all categories by Disability Type</li>
-                    <li>Full Arabic Language Support (RTL)</li>
-                    <li>User Reviews for all categories</li>
-                    <li>iOS/Android Mobile App companion</li>
+                    <li>Team Collaboration & Shared Projects</li>
+                    <li>Calendar Integration for Deadlines</li>
+                    <li>Mobile App version (React Native)</li>
+                    <li>AI-Powered Task Prioritization</li>
+                    <li>Dark/Light Mode Toggle</li>
+                    <li>Browser Notifications for Overdue Tasks</li>
                 </ul>
             </div>
+
             <div class="links-group">
-                <a href="https://reachable-6.onrender.com" target="_blank" class="btn btn-primary">Launch
+                <a href="https://task-manager-frontend-rm88.onrender.com" target="_blank" class="btn btn-primary">Launch
                     Live Project</a>
-                <a href="https://github.com/mohamedehab1717/reachable" target="_blank" class="btn btn-outline">Source
-                    Code</a>
+                <a href="https://github.com/mohamedehab1717/Task-Manager" target="_blank"
+                    class="btn btn-outline">Source Code</a>
             </div>
 
-            <p style="text-align: center; margin-top: 3rem; color: var(--text-secondary); font-size: 0.9rem;">Author:
-                Mohamed Ehab</p>
+
+            <p style="text-align: center; margin-top: 3rem; color: var(--text-secondary); font-size: 0.9rem;">Author: Mohamed Ehab</p>
         </div>
     </main>
 
