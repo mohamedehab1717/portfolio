@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase: Al Yaqout Shopify | Mohamed Ehab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background: #06060e;
+        }
+
+        .details-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(0, 212, 255, 0.1)), url('thumbnail.jpeg') center/cover no-repeat fixed;
+            padding-top: 80px;
+        }
+
+        .details-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(6, 6, 14, 0.7), #06060e);
+        }
+
+        .details-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-top: -100px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1000;
+            background: rgba(12, 12, 29, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            border-color: #6c63ff;
+            transform: translateX(-5px);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .showcase-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #6c63ff;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tags span {
+            background: rgba(108, 99, 255, 0.1);
+            color: #6c63ff;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .video-showcase {
+            margin-top: 4rem;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .video-card:hover {
+            border-color: #6c63ff;
+            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .video-card video {
+            width: 100%;
+            display: block;
+            max-height: 600px;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .video-info {
+            padding: 2rem;
+        }
+
+        .video-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #fff;
+        }
+
+        .video-info p {
+            color: #8a8eb5;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .dual-video {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .showcase-grid, .dual-video {
+                grid-template-columns: 1fr;
+            }
+            
+            .glass-panel {
+                padding: 1.5rem;
+                margin-top: -50px;
+            }
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 4rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html#projects" class="back-btn">← Back to Portfolio</a>
+
+    <header class="details-hero">
+        <div class="container">
+            <h1 class="reveal-up">💎 Al Yaqout Shopify Store</h1>
+            <p class="reveal-up delay-1" style="max-width: 800px; margin: 1rem auto; color: #8a8eb5;">Premium E-commerce experience tailored for high-end product selection.</p>
+        </div>
+    </header>
+
+    <main class="details-content">
+        <div class="glass-panel reveal-up delay-2">
+            <div class="tech-tags">
+                <span>Shopify</span><span>Liquid</span><span>JavaScript</span><span>Custom CSS</span><span>E-Commerce</span><span>RTL Support</span><span>Responsive Design</span><span>Theme Customization</span>
+            </div>
+
+            <p style="font-size: 1.15rem; color: #8a8eb5; line-height: 1.8;">
+                Al Yaqout is a sophisticated Shopify store designed for a luxury Middle Eastern brand. The project required a deep dive into Shopify's Liquid engine to build a custom shopping experience that handles complex product variants and provides a seamless RTL (Right-to-Left) interface.
+            </p>
+
+            <div class="showcase-grid">
+                <div class="showcase-section">
+                    <h3>🚀 Core Features</h3>
+                    <ul class="mini-list" style="margin-left: 1rem; color: #8a8eb5; list-style: disc;">
+                        <li><strong>Custom Product Logic:</strong> Advanced "bead" selection system for personalized items.</li>
+                        <li><strong>RTL Excellence:</strong> Fully mirrored layout for Arabic language support without breaking design integrity.</li>
+                        <li><strong>Premium UI:</strong> Clean, minimalist aesthetic with high-quality transitions and micro-interactions.</li>
+                        <li><strong>Responsive Filtering:</strong> Fast, custom-coded filters for navigating large product collections.</li>
+                    </ul>
+                </div>
+
+                <div class="showcase-section">
+                    <h3>🛠 Development</h3>
+                    <p style="color: #8a8eb5;">The store was built using a custom Shopify theme approach, focusing on performance and mobile-first experience. I implemented custom Liquid sections to allow the client to easily manage content through the Shopify Customizer.</p>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-showcase">
+                <h3>🎬 Video Demonstrations</h3>
+                <div class="video-container">
+                    
+                    <!-- Desktop View -->
+                    <div class="video-card">
+                        <video controls preload="metadata">
+                            <source src="alyaquot website.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-info">
+                            <h4>🖥️ Desktop Experience Walkthrough</h4>
+                            <p>Detailed look at the large-screen layout, showing the navigation, high-resolution product galleries, and the personalized selection flow.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mobile View -->
+                    <div class="video-card">
+                        <video controls preload="metadata">
+                            <source src="alyaquot website phone.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-info">
+                            <h4>📱 Mobile-First Design</h4>
+                            <p>A demonstration of how the store maintains its premium feel on smaller screens, focusing on thumb-friendly navigation and optimized mobile cart flows.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://al-yaqout-3.myshopify.com/" target="_blank" class="btn-glow">
+                    <span>Launch Live Store</span>
+                    <div class="btn-shine"></div>
+                </a>
+                <a href="https://github.com/mohamedehab1717/alyaquot-shopify.git" target="_blank" class="btn-ghost">Source Code</a>
+            </div>
+
+            <p style="text-align: center; margin-top: 4rem; color: #8a8eb5; font-size: 0.9rem;">Developed by Mohamed Ehab</p>
+        </div>
+    </main>
+
+    <script>
+        // Simple reveal script for details page
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal-up');
+            reveals.forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                    el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                }, 200 + (i * 150));
+            });
+        });
+    </script>
+</body>
+
+</html>
