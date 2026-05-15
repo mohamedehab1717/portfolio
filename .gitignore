@@ -1,0 +1,17 @@
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if any)
+node_modules/
+package-lock.json
+
+# Temporary
+*.log
+.temp/
