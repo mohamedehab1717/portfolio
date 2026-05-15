@@ -70,6 +70,8 @@ h1,h2,h3,h4 { font-family:var(--font); font-weight:700; }
 .btn-ghost { display:inline-flex; align-items:center; padding:.9rem 2rem; border:1px solid var(--glass-border); color:var(--text); border-radius:12px; font-weight:500; font-size:.9rem; transition:all .3s ease; }
 .btn-ghost:hover { border-color:var(--primary); color:var(--primary); background:rgba(108,99,255,0.05); transform:translateY(-2px); }
 .btn-sm { padding:.65rem 1.4rem; font-size:.85rem; }
+.btn-cv { border-color:var(--accent); color:var(--accent); }
+.btn-cv:hover { border-color:var(--accent); color:#fff; background:rgba(0,212,255,0.12); }
 
 /* ===== 3D CUBE ===== */
 .hero-visual { position:relative; display:flex; align-items:center; justify-content:center; height:450px; }
