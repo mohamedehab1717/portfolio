@@ -63,4 +63,4 @@ Welcome to my professional portfolio! This project showcases my skills as a **Fu
 - **LinkedIn:** [Mohamed Ehab](https://www.linkedin.com/in/mohamedehab1717/)
 - **GitHub:** [@mohamedehab1717](https://github.com/mohamedehab1717)
 
-Developed with ❤️ by Mohamed Ehab
+Developed by Mohamed Ehab
