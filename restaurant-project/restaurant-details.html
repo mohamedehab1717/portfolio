@@ -231,6 +231,79 @@
             width: 1em;
             margin-left: -1em;
         }
+        
+        .video-showcase {
+            margin-top: 4rem;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .video-card:hover {
+            border-color: #6c63ff;
+            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .video-card video {
+            width: 100%;
+            display: block;
+            max-height: 600px;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .video-info {
+            padding: 2rem;
+        }
+
+        .video-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #fff;
+        }
+
+        .video-info p {
+            color: #8a8eb5;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .dual-video {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .showcase-grid, .dual-video {
+                grid-template-columns: 1fr;
+            }
+            
+            .glass-panel {
+                padding: 1.5rem;
+                margin-top: -50px;
+            }
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 4rem;
+            justify-content: center;
+        }
+    
     </style>
 </head>
 
@@ -299,27 +372,34 @@ nmnm-restaurant
                 </div>
             </div>
 
-            <div class="gallery-detailed">
-                <h3>📸 Project Gallery</h3>
-                <div style="background: rgba(255, 255, 255, 0.02); border: 1px dashed var(--border-color); border-radius: 20px; padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
-                    <span style="font-size: 2.5rem;">🖼️</span>
-                    <h4 style="margin: 1rem 0 0.4rem; color: var(--text-primary);">Screenshots Coming Soon</h4>
-                    <p style="color: var(--text-secondary); max-width: 450px; margin: 0 auto;">Full application screenshots of the customer storefront, menu customizations, and administrative views will be uploaded shortly.</p>
-                </div>
-                <div class="gallery-grid-lg">
-                    <img src="background.jpg" alt="nmnm - Luxury Storefront Mockup">
-                </div>
-            </div>
-
-            <!-- Video Demo Section -->
-            <div class="video-section">
-                <h3>🎬 Full Walkthrough Demo</h3>
-                <div class="video-grid">
-                    <div class="video-card" style="padding: 3rem; text-align: center; background: rgba(255, 255, 255, 0.02); border: 1px dashed var(--border-color);">
-                        <span style="font-size: 3rem;">🎥</span>
-                        <h4 style="margin-top: 1rem; color: var(--text-primary);">Video Demo Coming Soon</h4>
-                        <p style="color: var(--text-secondary); max-width: 400px; margin: 0.5rem auto 0;">The walkthrough video demonstrating order flow, user checkout, and the admin order queue is being prepared and will be added here soon.</p>
+         
+            <!-- Video Section -->
+            <div class="video-showcase">
+                <h3>🎬 Video Demonstrations</h3>
+                <div class="video-container">
+                    
+                    <!-- Desktop View -->
+                    <div class="video-card">
+                        <video controls preload="metadata">
+                            <source src="rest-video-desktop.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-info">
+                            <h4>🖥️ Desktop Experience Walkthrough</h4>
+                            <p>A modern restaurant web application featuring an intuitive customer experience and a powerful Admin Dashboard for managing menu items, categories, orders, and users. Built with responsive design principles to ensure a seamless experience across all devices.</p>
+                        </div>
                     </div>
+
+                    <!-- Mobile View -->
+                    <div class="video-card">
+                        <video controls preload="metadata">
+                            <source src="rest-video-mobile.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-info">
+                            <h4>📱 Mobile-First Design</h4>
+                            <p>A fully responsive e-commerce platform designed to deliver a seamless shopping experience across all devices. Includes product browsing, cart functionality, authentication system, checkout process, and a comprehensive Admin Dashboard for managing inventory, orders, categories, and customer data.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
