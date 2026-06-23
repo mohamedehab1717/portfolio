@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase: Sakina - Mental Health Support | Mohamed Ehab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .details-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 30%, #312e81 50%, #1e1b4b 70%, #0f172a 100%);
+            padding-top: 80px;
+        }
+
+        .details-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10, 12, 16, 0.4), var(--bg-dark));
+        }
+
+        .details-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .glass-panel {
+            background: rgba(22, 27, 34, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-top: -100px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .back-btn:hover {
+            border-color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .showcase-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tags span {
+            background: rgba(99, 102, 241, 0.08);
+            color: #c7d2fe;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .graduation-badge {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(168, 85, 247, 0.12));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .graduation-badge .badge-icon {
+            font-size: 2.5rem;
+        }
+
+        .graduation-badge h4 {
+            margin: 0 0 0.2rem 0;
+            color: #e0e7ff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .graduation-badge p {
+            margin: 0;
+            color: #c7d2fe;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .role-highlight {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .role-highlight .role-icon {
+            font-size: 1.5rem;
+            margin-top: 2px;
+        }
+
+        .role-highlight p {
+            margin: 0;
+            color: #a7f3d0;
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .role-highlight strong {
+            color: #6ee7b7;
+        }
+
+        .structure-tree {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+
+        .mini-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mini-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .video-showcase {
+            margin-top: 4rem;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .video-card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .video-card video {
+            width: 100%;
+            display: block;
+            max-height: 600px;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .video-info {
+            padding: 2rem;
+        }
+
+        .video-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #fff;
+        }
+
+        .video-info p {
+            color: #8a8eb5;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .links-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.12);
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-item .feat-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .feature-item .feat-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .feature-item .feat-text strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .glass-panel {
+                padding: 1.5rem;
+                margin-top: -50px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html#projects" class="back-btn">← Back to Portfolio</a>
+
+    <header class="details-hero">
+        <div class="container hero-content">
+            <h1 class="reveal-up">🧠 Sakina | Mental Health Support Platform</h1>
+            <p class="reveal-up delay-1" style="max-width: 800px; margin: 1rem auto;">An AI-powered mental wellness
+                companion designed to provide emotional support, mood tracking, guided exercises, and therapeutic
+                interventions.</p>
+        </div>
+    </header>
+
+    <main class="details-content">
+        <div class="glass-panel reveal-up delay-2">
+
+            <!-- Graduation Project Badge -->
+            <div class="graduation-badge">
+                <span class="badge-icon">🎓</span>
+                <div>
+                    <h4>Graduation Project</h4>
+                    <p>This platform was developed as a graduation project. A comprehensive mental health support system combining modern web technologies with AI-powered emotional intelligence.</p>
+                </div>
+            </div>
+
+            <!-- My Role Highlight -->
+            <div class="role-highlight">
+                <span class="role-icon">👨‍💻</span>
+                <p><strong>My Role — Full Stack Developer:</strong> I was responsible for building the entire application from the ground up — frontend UI/UX with React, backend APIs with Node.js & Express, database design with MongoDB, authentication system, real-time features, and all application logic. The only part I did not work on was the AI/ML module, which was handled by a teammate.</p>
+            </div>
+
+            <div class="tech-tags">
+                <span>React (Vite)</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Mongoose</span><span>JWT Authentication</span><span>Tailwind CSS</span><span>Zustand</span><span>Framer Motion</span><span>Recharts</span><span>REST APIs</span><span>Multer</span>
+            </div>
+
+            <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                Sakina is a full-stack mental health web application that combines an empathetic AI chatbot with a rich set of self-care tools. Users can track their moods, journal their thoughts, complete guided therapeutic exercises, listen to calming music therapy sessions, and receive personalized risk assessments — all within a beautiful, calming interface designed to feel safe and supportive.
+            </p>
+
+            <div class="showcase-grid">
+                <div class="showcase-section">
+                    <h3>🚀 Key Features</h3>
+                    <div class="features-grid" style="grid-column: 1 / -1;">
+                        <div class="feature-item">
+                            <span class="feat-icon">💬</span>
+                            <div class="feat-text">
+                                <strong>AI Chat Companion</strong>
+                                An empathetic chatbot with voice input support, emotional analysis, and context-aware conversations.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">📊</span>
+                            <div class="feat-text">
+                                <strong>Mood Tracker</strong>
+                                Interactive mood logging with visual analytics, emotional shift detection, and historical charts via Recharts.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">📓</span>
+                            <div class="feat-text">
+                                <strong>Smart Journal</strong>
+                                A personal journaling system for self-reflection with timestamps and mood correlation.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">🧘</span>
+                            <div class="feat-text">
+                                <strong>Guided Exercises</strong>
+                                Breathing exercises, grounding techniques, and mindfulness activities with step-by-step guidance.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">🎵</span>
+                            <div class="feat-text">
+                                <strong>Music Therapy</strong>
+                                Curated calming audio sessions with a built-in player using Howler.js for ambient sound therapy.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">⚠️</span>
+                            <div class="feat-text">
+                                <strong>Risk Assessment</strong>
+                                Survey-based mental health evaluations with scoring algorithms and intervention recommendations.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">🛡️</span>
+                            <div class="feat-text">
+                                <strong>Crisis Support (Back to Safe)</strong>
+                                Emergency grounding toolkit with instant access to calming resources and safety plans.
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-icon">📈</span>
+                            <div class="feat-text">
+                                <strong>Recovery Journey</strong>
+                                Personalized progress tracking with milestones, emotional shift analytics, and insights dashboard.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-section">
+                    <h3>📂 Structure & Database</h3>
+                    <pre class="structure-tree" style="margin-bottom: 2rem;">
+sakina
+├── frontend (React + Vite)
+│   └── src
+│       ├── components (31 components)
+│       │   ├── ChatPage, MoodTracker
+│       │   ├── Journal, Exercises
+│       │   ├── MusicTherapy, Profile
+│       │   ├── RiskAssessment
+│       │   ├── RecoveryJourney
+│       │   ├── AdminDashboard
+│       │   └── BackToSafe, Onboarding...
+│       ├── context (Auth, Theme)
+│       ├── store (Zustand)
+│       └── services (API layer)
+├── backend (Node.js + Express)
+│   ├── models (10 schemas)
+│   ├── routes (10 route files)
+│   ├── middleware (Auth, Upload)
+│   ├── services
+│   └── server.js
+└── ai-main (Python — teammate)</pre>
+                    <p><strong>🗄 Mongoose Schemas</strong></p>
+                    <ul class="mini-list" style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li><strong>User:</strong> Name, Email, Password (bcrypt), Profile, Preferences.</li>
+                        <li><strong>Mood:</strong> Emotion type, Intensity, Notes, Timestamps.</li>
+                        <li><strong>JournalEntry:</strong> Content, Tags, Mood correlation.</li>
+                        <li><strong>Conversation & Message:</strong> Chat history, AI responses, Emotional context.</li>
+                        <li><strong>Exercise:</strong> Type, Steps, Duration, Category.</li>
+                        <li><strong>Survey:</strong> Questions, Scores, Risk levels.</li>
+                        <li><strong>InterventionSession:</strong> Therapy type, Progress, Outcomes.</li>
+                        <li><strong>Event:</strong> Calendar events, Reminders.</li>
+                        <li><strong>UserInsight:</strong> Patterns, Emotional trends, AI-generated insights.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Technical Details -->
+            <div class="showcase-section" style="margin-top: 4rem;">
+                <h3>⚙️ Technical Highlights</h3>
+                <ul class="mini-list"
+                    style="margin-left: 1rem; color: var(--text-secondary); display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                    <li>JWT-based authentication with protected routes</li>
+                    <li>Zustand for lightweight state management</li>
+                    <li>Framer Motion animations throughout the UI</li>
+                    <li>Recharts for mood analytics & data visualization</li>
+                    <li>Multer for file/audio uploads</li>
+                    <li>Rate limiting & Helmet for API security</li>
+                    <li>Adaptive UI with theme provider</li>
+                    <li>Admin dashboard for content management</li>
+                    <li>Password recovery via Nodemailer</li>
+                    <li>Responsive mobile-first design</li>
+                    <li>Onboarding flow for new users</li>
+                    <li>Real-time system health monitoring</li>
+                </ul>
+            </div>
+
+            <!-- Video Demo Section -->
+            <div class="video-showcase">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--primary-color);">🎬 Video Demo</h3>
+                <div class="video-container">
+                    <div class="video-card">
+                        <video controls preload="metadata">
+                            <source src="SAKINA LAST VIDEO.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-info">
+                            <h4>🖥️ Full Platform Walkthrough</h4>
+                            <p>A comprehensive demo showcasing Sakina's features — from onboarding and AI chat to mood tracking, guided exercises, music therapy, journaling, risk assessments, and the recovery journey dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links-group">
+                <a href="https://github.com/mohamedehab1717/sakina" target="_blank" class="btn-glow">
+                    <span>View on GitHub</span>
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+
+            <p style="text-align: center; margin-top: 3rem; color: var(--text-secondary); font-size: 0.9rem;">Author:
+                Mohamed Ehab (Full Stack) — Graduation Project</p>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
